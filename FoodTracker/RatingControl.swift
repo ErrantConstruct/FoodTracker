@@ -48,7 +48,7 @@ class RatingControl: UIView {
 		
 		// Offset each button's origin by the length of the button plus spacing.
 		for(index, button) in ratingButtons.enumerate() {
-			buttonFrame.origin.x = CGFloat(index * (buttonSize + 5))
+			buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
 			button.frame = buttonFrame
 		}
 		updateButtonSelectionStates()
