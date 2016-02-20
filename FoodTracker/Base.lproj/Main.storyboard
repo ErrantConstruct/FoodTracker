@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Meal Table View Controller-->
         <scene sceneID="7aB-te-LqD">
             <objects>
-                <tableViewController id="yFM-RS-jIh" sceneMemberID="viewController">
+                <tableViewController id="yFM-RS-jIh" customClass="MealTableViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="3nG-nM-GxY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +38,11 @@
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="QyP-GG-qYg" id="ke6-9b-j7u"/>
+                                    <outlet property="photoImageView" destination="qTc-Po-myy" id="M7m-PC-Toe"/>
+                                    <outlet property="ratingControl" destination="HML-Gp-BDK" id="7EA-8s-8Df"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
