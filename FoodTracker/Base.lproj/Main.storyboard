@@ -116,15 +116,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="qYf-PH-GWL">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Fb8-ky-5mC"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eET-Nz-tE1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eET-Nz-tE1">
+                            <connections>
+                                <segue destination="GbI-bO-K0z" kind="unwind" unwindAction="unwindToMealList:" id="hdA-bR-L1x"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="cfZ-4G-i0e" id="MgU-G7-fts"/>
                         <outlet property="photoImageView" destination="rZw-0E-NVa" id="NNn-uN-Zog"/>
                         <outlet property="ratingControl" destination="mby-6B-zbJ" id="uBw-uO-LRQ"/>
+                        <outlet property="saveButton" destination="eET-Nz-tE1" id="I09-cg-Agj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="GbI-bO-K0z" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="ptE-0u-7jm">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="D31-Ez-Ztk"/>
